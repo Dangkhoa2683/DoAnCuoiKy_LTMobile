@@ -19,12 +19,12 @@ export default function DishRow({ item }) {
         dispatch(removeFormCart({id: item.id}));
     };
 
-    const onPressProduct = () => {
+    /* const onPressProduct = () => {
         navigation.navigate('Product', { productId: item.id });
-    };
+    }; */
 
     return (
-        <TouchableOpacity onPress={onPressProduct}>
+        <TouchableOpacity>
             <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: 'white', padding: 12, borderRadius: 20, shadowColor: '#000', shadowOpacity: 0.2, shadowRadius: 10, marginBottom: 10, marginHorizontal: 10 }}>
                 <Image style={{ height: 100, width: 100, borderRadius: 20 }} source={item.image} />
                 <View style={{ flex: 1, marginLeft: 12 }}>
