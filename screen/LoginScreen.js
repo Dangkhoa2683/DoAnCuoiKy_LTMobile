@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import * as Icon from "react-native-feather";
 import { themeColors } from '../theme';
 
@@ -8,9 +8,14 @@ export default function LoginScreen({ navigation }) {
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
+    if (username == '' || password == '') {
+      Alert.alert('Lỗi', 'Tên đăng nhập và mật khẩu không được bỏ trống!');
+    } else {
+      Alert.alert('Thông báo', 'Đăng nhập thành công!');
+      navigation.navigate('Home');
+    }
     console.log('Username:', username);
     console.log('Password:', password);
-    navigation.navigate('Home');
   };
 
   return (

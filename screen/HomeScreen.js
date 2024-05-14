@@ -19,7 +19,7 @@ export default function HomeScreen() {
       <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 10, paddingBottom: 10, marginTop:8 }}>
       <View style={{ backgroundColor: themeColors.bgColor(1), padding: 10, borderRadius: 90, marginRight: 5 }}>
           <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-            <Icon.Menu height={20} width={20} strokeWidth={2.5} stroke="white" />
+            <Icon.User height={20} width={20} strokeWidth={2.5} stroke="white" />
           </TouchableOpacity>
         </View>
         <View style={{ flexDirection: 'row', flex: 1, alignItems: 'center', padding: 10, borderRadius: 30, borderWidth: 1, borderColor: 'gray' }}>
